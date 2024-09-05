@@ -1,0 +1,33 @@
+.container{
+    width: 300px;
+    height: 430px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 700px;
+    margin-top: 100px;
+    padding: 50px;
+    padding-right: 50px;
+    box-shadow: 1px;
+}
+.head{
+    color: blueviolet;
+    text-align: center;
+    font-size:x-large;
+}
+input{
+    width: 280px;
+    height: 25px;
+}
+.box{
+    width: 90px;
+    height: 40px;
+    background-color: blueviolet;
+    
+}
+.Admin{
+    width: 290px;
+    height: 30px;
+}
+.log{
+    color: rgb(117, 5, 221);
+}
