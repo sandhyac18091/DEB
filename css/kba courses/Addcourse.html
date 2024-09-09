@@ -3,58 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add course</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Add Course</title>
+    <link rel="stylesheet" href="/css/stylecss/style.css">
 </head>
 <body>
-    <form>
-        <table>
-            <div class="container">
-            <h1>Add Course</h1>
-            <tr><td>Name</td></tr>
-            <tr>
-                <td><input type="text" placeholder="eg.Certified Blockchain Associate "></td>
+    <div class="log">
+        <img src="logo.png" height="50">
+        
+    
+    <div class="dv">
+      <nav>
+        <ul class="nav" type="none">
+            <li><a href="Home.html">Home</a></li> 
+            <li><a href="Addcourse.html">Add Course</a></li> 
+            <li><a href="Contact.html">Contact Us</a></li> 
+            <li><a href="Top courses.html">Courses</a></li> 
+            <li><a href="#Contact">Logout</a></li>
 
-            </tr>
-            <tr>
-                <td>Course id</td>
-            </tr>
-            <tr>
-                <td><input type="text" placeholder="eg.1"></td>
-            </tr>
-            <tr></tr>
-            <td><b>Course Type: </b></td>
-            <tr>
-                <td>
-                    <select class="Self-paced">
-                        <option value="Admin">Admin</option>
-                        <option value="staff">Staff</option>
-                        <option value="Others">Oters</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Description</td>
-            </tr>
-            <tr>
-                <td><textarea rows="5" cols=""></textarea></td>
-            </tr>
-            <td><b>Price </b></td>
-            <tr>
-                <td>
-                    <select class="Rs.5000">
-                        <option value="Admin">6000</option>
-                        <option value="staff">8000</option>
-                        <option value="Others">10000</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Add Course"></td>
-            </tr>
-
-        </table>
+    
+        </ul>
+      </nav>
     </div>
-    </form>
+    <div class="add">
+    <h2 class="AC">Add Course</h2>
+    <label class="CN">Course Name</label><br>
+    <input type="text" placeholder="eg.Certified Blockchain Associate" class="CB"><br>
+    <label class="CI">Course Id</label><br>
+    <input type="text" placeholder="eg.1" class="VM"><br>
+    <label class="CT">Course Type</label><br>
+    <select class="pri">
+        <option value="Self-Paced">Self-paced</option>
+        <option value="hybrid">Self-Paced</option>
+        <option value="part-time">Part-Time</option>
+        <option value="Full-time">Full-Time</option>
+    </select><br>
+    <label class="desc">Description</label><br>
+    <textarea cols="67" rows="6" placeholder="small description on the Course" class="desc"></textarea><br>
+    <label class="Pr">Price</label><br>
+    <select class="pri">
+        <option value="Self-Paced">5000</option>
+        <option value="hybrid">6000</option>
+        <option value="part-time">7000</option>
+        <option value="Full-time">8000</option>
+    </select><br>
+    <input type="submit" value="Add Course" class="butt">
+    
+
+
+</div>
 </body>
 </html>
