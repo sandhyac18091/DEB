@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addbook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body >
+   
+     
+
+     <div class="text-right bg-gradient-to-r mt-6 space-x-10" >
+        
+
+        <a href="Home.html" class="pr-6 text-black font-extrabold text-lg font-serif">Home</a>
+        <a href="signup.html" class="pr-6 text-black font-extrabold text-lg font-serif">Sign Up</a>
+        <a href="Login.html" class="pr-6 text-black font-extrabold text-lg font-serif">Login</a>
+        <a href="Addbook.html" class="pr-6 text-black font-extrabold text-lg font-serif">Addbook</a>
+        <a href="Viewbook.html" class="pr-6 text-black font-extrabold text-lg font-serif">Viewbook</a>
+    </div>
+
+
+    <div class="flex justify-center items-center min-h-screen bg-cover bg-center" style="background-image: url('library.jpg')">
+<div class="flex justify-center mt-32 pb-96">
+    <div class="w-96 p-8 h-full bg-white mr-96 rounded-md">
+        <div class="font-serif">
+            <h2 class="text-center text-xl font-bold">Add Book</h2>
+            
+                <div class="font-serif">
+                    <label for="username">Book Title</label>
+                    <input type="text" id="username" name="username" required class="w-80 h-8 rounded-lg border border-black">
+                </div><br>
+                
+                    <label>Book Type</label>
+                    <select class="w-80 h-8 rounded-lg border border-black">
+                      <option value="Novel">Novel</option>
+                      <option value="Bibliogrphy">Bibliogrphy</option>
+                      <option value="Soal">Soal</option>
+                    </select><br><br>
+               
+                
+                    <label for="Price"> Price</label>
+                    <select class="w-80 h-8 rounded-lg border border-black">
+                      <option value="500">500</option>
+                      <option value="600">600</option>
+                      <option value="700">700</option>
+                    </select><br><br>
+                
+                <div class="">
+                <label class="desc">Description</label><br>
+                <textarea cols="34" rows="4" placeholder="small description on the Book" class="rounded-lg border border-black"></textarea><br>
+              </div><br>
+                <div class="">
+                    <button type="submit" class="w-80 h-8 rounded-lg bg-cyan-600">Login</button>
+                </div>
+        </div>
+</div>
+</body>
+</html>

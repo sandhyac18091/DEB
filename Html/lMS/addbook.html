@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body bgcolor="lightgray">
+    
+    <header>
+        <h1 style="background-color: blue;text-align: center;">Welcome to the Library</h1>
+        <p style="text-align: center;">Your gateway to a world of knowledge</p>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="addbook.html">Addbook</a>
+        <a href="viewbook.html">Viewbook</a>
+    </nav>
+    <center>
+        <h1 style="color:rgba(122, 20, 218, 0.904)">Add Book</h1>
+        <form>
+            
+            <table cellspacing="8">
+                <tr>
+                    <td>Book Title</td>
+                    
+                </tr>
+                <tr></tr>
+                <td><input type="text" style="width: 200px;height: 20px;"></td>
+                <tr>
+                    <td>Book Type</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="book" required style="width: 200px;height: 20px;">
+                            <option value="Novel">Novel</option>
+                            <option value="Comics">Comics</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="price" required style="width: 200px;height: 20px;">
+                            <option value="100/">100/</option>
+                            <option value="250/">250/</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Description</td>
+                </tr>
+                <tr>
+                    <td><textarea cols="22" rows="4" placeholder="Enter the Description" required></textarea></td>
+                </tr>
+                
+                
+                <tr>
+                    <td><input type="submit" value="AddBook" style="text-align: center;"></td>
+                </tr>
+               
+            </table>
+        </center>
+</body>
+</html>

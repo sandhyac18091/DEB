@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center mt-32 pb-96">
+        <div class="w-96 p-8 h-full bg-red-100  mr-96 rounded-md ">
+            <div class="font-serif">
+                <h2 class="text-center text-xl font-bold text-fuchsia-600">Sign Up</h2>
+                
+                    <div class="mr-auto">
+                        <label>Name</label><br>
+                        <input type="text" id="username" name="username" required class="w-80 h-8 rounded border border-slate-300">
+                    </div><br>
+                    <div class="input-group">
+                        <label>Email</label><br>
+                        <input type="password" id="password" name="password" required class="w-80 h-8 rounded border border-slate-300">
+                    </div><br>
+                    <div class="">
+                        <label> Password</label><br>
+                        <input type="password" id="password" name="password" required class="w-80 h-8 rounded border border-slate-300">
+                    </div><br>
+                    <div class="">
+                        <label> Price</label><br>
+                        <select class="w-80 h-8 rounded-lg border border-slate-300">
+                            <option value="Self-Paced">5000</option>
+                            <option value="hybrid">6000</option>
+                            <option value="part-time">7000</option>
+                            <option value="Full-time">8000</option>
+                        </select><br>
+                    </div><br>
+                    <div class="">
+                        <button type="submit" class="text-white  h-8 w-24  bg-fuchsia-700">Sign Up</button>
+                    </div>
+                </form>
+                
+            </div><br>
+            <label class="font-serif"><b>Already have an account? </b><span class="font-serif text-fuchsia-600"><a href="login.html">Login</a></span></label>
+        </div>
+    </div>
+</body>
+</html>
