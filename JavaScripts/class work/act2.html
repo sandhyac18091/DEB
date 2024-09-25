@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a=5;
+       let b=7;
+       document.write(`Before swapping  a=${a} b=${b}`,"<br>")
+       let temp=a;
+           a=b;
+           b=temp;
+           document.write(`After swapping  a=${a} b=${b}`,"<br><br>")
+        //    without temp
+        let c=3;
+        let d=8;
+        document.write(`Before swapping c=${c} d=${d}<br>`)
+        c=c+d;
+        d=c-d;
+        c=c-d;
+        document.write(`After swapping c=${c} d=${d}<br>`)
+
+        // Celsius to fahrenheit
+        document.write("<br> convert Celsius to fahrenheit ")
+        let celsius = 20
+        // document.write("Celsius = ",celsius, "<br>")
+        let fahrenheit = (celsius * (9 / 5) + 32)
+        document.write("Celsius to fahrenheit = ", fahrenheit,"<br>")
+        let cf = ((fahrenheit - 32) * (5 / 9))
+        document.write("fahrenheit to Celsius =", cf,"<br>" )
+        // (20°C × 9/5) + 32 = 68°F
+        // f to c
+        // (32°F − 32) × 5/9 = 0°C
+        
+
+        // largest among two numbers
+        let x=25;
+        let y=30;
+        if (x > y) {
+  document.write("The largest number is:",x)
+} else {
+  document.write("<br>The largest number is:",y,"<br>")
+}
+// smallest among two numbers
+        let num1=25;
+        let num2=30;
+        if (num2 > num1) {
+  document.write(" <br>The smallest number is:",num1)
+} else {
+  document.write("The smallest number is:",num2,"<br>")
+}
+
+// Square of a number
+document.write("<br> find square of a number <br>")
+        let n = 8
+        document.write("Number = ", n, "<br>")
+        document.write(`Square of ${n} = `, n ** 2,"<br>")
+        
+        // cube of a number
+        document.write("<br> find cube of a number <br>")
+        let n1 = 6
+        document.write("Number = ", n1, "<br>")
+        document.write(`Cube of ${n1} = `, n1 ** 4, "<br>")
+       
+
+        // find area of square, circle, rectangle, triangle
+
+        document.write("<br> find area of square, circle, rectangle, triangle <br>")
+        let length = 20
+        let breadth = 30
+
+        let radius = 5
+        const pi = 3.14
+        document.write("length = ", length, "<br>breadth = ", breadth, "<br>radius = ", radius, "<br>")
+
+        document.write(`Area of rectangle = `, length * breadth, "<br>")
+        document.write(`Area of square = `, length ** 2, "<br>")
+        document.write(`Area of circle = `, radius * radius * pi, "<br>")
+        document.write(`Area of triangle= `, (0.5 * (breadth * length)),"<br>")
+        
+        // find perimeter of rectangle, square, circle, triangle
+        document.write("<br> find perimeter of square, circle, rectangle, triangle <br>")
+        document.write(`Perimeter of rectangle = `, 2 * (length + breadth), "<br>")
+        document.write(`Perimeter of square = `, 4 * length, "<br>")
+        document.write(`Perimter of circle = `, 2 * radius * pi, "<br>")
+        let hyp = Math.sqrt(breadth * breadth + length * length)
+        document.write(`Perimeter of triangle= ${length + breadth + hyp}`,"<br>")
+        
+        // find simple interest & compound interest
+        document.write("<br>find simple interest & compound interest <br>")
+        // S.I. = (P × R × T)/100
+        let p = 10000
+        let r = 0.5 / 100
+        let r2 = 0.5
+        let t = 2
+        let n2 = 12
+        document.write("principal amount =", p, "<br>rate = ", r, "<br>time = ", t, "<br>number of time = ", n2, "<br>")
+        let si = ((p * r2 * t) / 100)
+        document.write("Simple interest = ", si, "<br>")
+        let ci = p * Math.pow(1 + (r / n2), n2 * t)
+        document.write("Compound interest = ", ci,"<br>")
+        
+
+        // check the given number is zero,positive and negative
+        document.write("<br>check the given number is zero,positive and negative <br>")
+
+        let number = 30
+
+        document.write(`Number = ${number} <br>`)
+
+        if (number > 0) {
+            document.write(`${number} is a Positive Number`)
+        }
+        else if (number < 0) {
+            document.write(`${number} is a Negative Number`)
+        }
+        else {
+            document.write(`${number} is a Zero`)
+        }
+        
+    </script>
+</body>
+</html>
