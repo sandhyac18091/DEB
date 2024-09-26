@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[1,2,3,4]
+        a.push(5)
+        document.write("<br>",a);
+        a.pop();
+        document.write("<br>",a);
+        let b=a.toString();
+        document.write("<br>",b[1]);
+        let c=[5,6,7,8];
+        let d=a.concat(c);
+        document.write("<br>",d);
+        document.write(" <br><br>2 is the position,after delete to insert the elemrnt is 0 and how many elements insert the array") 
+        c.splice(2,0,2,3)
+        document.write("<br>",c);
+        document.write("<br> <br>1 is how many Elements is delete")
+        c.splice(2,2,2,3);
+        document.write("<br>",c);
+        
+        let k=c.slice(2);
+        document.write("<br>",k)
+        let l=c.slice(2,4);
+        document.write("<br>",l)
+        document.write("<br> reverse an array")
+        document.write("<br>",c.reverse());
+        document.write("<br> sorting an array")
+        document.write("<br>",c.sort());
+        document.write("<br> index of 6th element")
+        let n=c.indexOf(6);
+        document.write("<br>",n);
+        document.write("<br> append a * of all elements")
+        document.write("<br>",c.join("*"));
+
+
+    </script>
+</body>
+</html>
