@@ -63,6 +63,38 @@
 </div>
 </body>
 </div>
+
+    <div id="mydiv5">
+        <div id="good">
+            <label for="radio">GOOD</label>
+        </div>
+        <div id="bad">
+            <label for="radio">BAD</label>
+        </div>
+        <div id="avg">
+            <label for="radio">AVERAGE</label>
+        </div>
+    </div>
+    <script>
+    {
+        let element = document.createElement("input");
+        element.type = "radio";
+        element.name = "good";
+        document.getElementById("good").appendChild(element);
+
+        let element1 = document.createElement("input");
+        element1.type = "radio";
+        element1.name = "good";
+        document.getElementById("bad").appendChild(element1);
+
+        let element2 = document.createElement("input");
+        element2.type = "radio";
+        element2.name = "good";
+        document.getElementById("avg").appendChild(element2);
+
+    }
+
+</script>
 <footer >
     <p class="bg-purple-200 h-12 text-center  pt-2 text-purple-400 mt-96">&copy; This page All rights reserved</p>
     </footer>

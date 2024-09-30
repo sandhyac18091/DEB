@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3 Set 2</title>
+</head>
+
+<body>
+
+    <div>
+
+        <h3>Program to check whether a given positive number is a multiple of 3 or 7</h3>
+        <script>
+
+            let num1 = 54;
+
+            document.write("Entered number is:\t", num1)
+            if (num1 % 3 == 0) {
+
+                document.write("<br><br> Number divisible by 3")
+            }
+            else if (num1 % 7 == 0) {
+                document.write("<br><br> Number divisible by 7")
+            }
+            else {
+                document.write("<br><br> Number is not divisible by either 3 or 7")
+            }
+        </script>
+    </div>
+
+    <div>
+
+        <h3>Program to find the sign of the product of three numbers</h3>
+
+        <script>
+
+            let m = 10;
+            let n = -10;
+            let p = 5;
+
+            let prdt = m * n * p;
+            document.write("product of numbers is:",prdt)
+            if (Math.sign(prdt) == 1) {
+
+                document.write("<br><br>The sign of the result is:\t", "Positive")
+            }
+            else {
+                document.write("<br><br>The sign of the result is:\t", "Negative")
+            }
+        </script>
+    </div>
+
+    <div>
+
+        <h3>Program to check the CGPA using Switch Case</h3>
+
+        <script>
+
+            let optn = 10;
+
+            switch (optn) {
+
+                case 8: {
+
+                    document.write("You got 8 CGPA")
+                    break;
+                }
+
+                case 10: {
+
+                    document.write("You got 10 CGPA")
+                    break;
+                }
+
+                case 7: {
+
+                    document.write("You got 7 CGPA")
+                    break;
+                }
+
+                default: {
+
+                    document.write("Invalid input")
+                }
+            }
+        </script>
+    </div>
+
+    <div>
+
+        <h3>Program to print the month name by given number using Switch Case</h3>
+
+        <script>
+            let num2 = 9;
+
+            switch (num2) {
+
+                case 1: {
+                    document.write("Month is January")
+                    break;
+                }
+
+                case 2: {
+                    document.write("Month is February")
+                    break;
+                }
+
+                case 3: {
+                    document.write("Month is March")
+                    break;
+                }
+
+                case 4: {
+                    document.write("Month is April")
+                    break;
+                }
+
+                case 5: {
+                    document.write("Month is May")
+                    break;
+                }
+
+                case 6: {
+                    document.write("Month is June")
+                    break;
+                }
+
+                case 7: {
+                    document.write("Month is July")
+                    break;
+                }
+
+                case 8: {
+                    document.write("Month is August")
+                    break;
+                }
+
+                case 9: {
+                    document.write("Month is September")
+                    break;
+                }
+
+                case 10: {
+                    document.write("Month is October")
+                    break;
+                }
+
+                case 11: {
+                    document.write("Month is November")
+                    break;
+                }
+
+                case 12: {
+                    document.write("Month is December")
+                    break;
+                }
+
+                default: {
+                    document.write("Unknown Month")
+                }
+            }
+        </script>
+
+    </div>
+
+    
+
+    <div>
+
+        <h4>Program to read temperature in centigrade and display a suitable message</h4>
+
+        <script>
+
+            let temp = 30;
+
+            document.write("Entered temperature value:\t", temp)
+            let temp1 = (temp < 0) ? document.write("<br><br> Freezing weather") :
+
+                (temp > 0) && (temp <= 10) ? document.write("<br><br> Very Cold weather") :
+
+                    (temp > 10) && (temp <= 20) ? document.write("<br><br> Cold weather") :
+
+                        (temp > 20) && (temp <= 30) ? document.write("<br><br> Normal in Temp") :
+
+                            (temp > 30) && (temp <= 40) ? document.write("<br><br> Its Hot") : document.write("<br><br> Its Very Hot")
+
+        </script>
+    </div>
+</body>
+
+</html>

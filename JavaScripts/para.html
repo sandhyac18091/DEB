@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Reading Input Data from HTML using functions</h1>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="showName()">showName</button>
+    <label for="ageInput">Enter your age:</label>
+    <input type="text" id="ageInput">
+    <button onclick="showage()">showage</button>
+
+    <p id="output"></p>
+    <script>
+        function showName() {
+            let name = document.getElementById('nameInput').value;
+            document.getElementById('output').textContent = 'hello, ' + name;
+        }
+        function showage() {
+            let age = document.getElementById('ageInput').value;
+            document.getElementById('output').textContent = "your age " + age;
+        }
+    </script>
+</body>
+
+</html>

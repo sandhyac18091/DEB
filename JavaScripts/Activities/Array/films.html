@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Position of favorite film in the list")
+        let b=["golam","arm","vaazha","premalu"];
+        document.write("<br>",b.indexOf("premalu"));
+        document.write("<hr>")
+        
+
+        document.write("Add a movie in the list")
+        let a=["golam,arm,vaazha,premalu"]
+        a.push("bramayugam")
+        document.write("<br>",a);
+        document.write("<hr>")
+
+        // pop from the list
+        document.write("Remove a movie in the list")
+        let a1=["golam,arm,vaazha,premalu"]
+        a.pop("bramayugam")
+        document.write("<br>",a1);
+        document.write("<hr>")
+
+        //delete least intrested film
+        document.write("delete least intrested film from the list")
+        let a2=["golam","arm","vaazha","premalu"];
+        
+        document.write("<br>",a2.splice(1));
+        document.write("<hr>")
+
+        // Make a different list from 3rd position to 6th position
+        document.write("different list from 3rd position to 6th position")
+        let a3=["golam","arm","vaazha","premalu","bramayyugam","ranam","kishkinda kaandam","lio"];
+        // Array to store movies from 3rd to 6th position (index 2 to 5)
+        let a4=[];
+        // Using a for loop to extract movies from 3rd to 6th position
+        for(let i=2;i<=5;i++){
+            a4.push(a3[i]);
+        }
+        document.write("<br>",a4);
+        document.write("<hr>")
+        
+        // Search whether "ARM" is on your list
+        document.write("Search whether 'arm'is on your list")
+        let a5=["golam","arm","vaazha","premalu","bramayyugam","ranam","kishkinda kaandam","lio"];
+        if(a5.indexOf("arm")!==-1){
+            document.write("<br>arm is on the list");
+        }
+        else{
+            document.write("<br>arm is not on the list");
+        }
+        document.write("<hr>")
+        // Get the website name from a particular url
+
+
+        
+
+
+
+
+        
+    </script>
+</body>
+</html>

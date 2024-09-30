@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript functions-introduction</title>
+</head>
+<body>
+   
+    <script>
+        //function deefinition
+        function greet(name){
+            document.write('hello '+name);
+        }
+        //function call
+        greet('world');
+
+        document.write("<br>Defining and using functions<br>")
+        function add (a,b){
+            return a+b;
+        }
+        //function call
+        let sum=add(5,10);
+        document.write("sum of a number is:",sum);
+
+        //multiplication
+        function mul(a,b){
+            return a*b;
+        }
+        let multi=mul(5,10);
+        document.write("<br>multiplication  of a number is:",multi);
+
+        //quation
+        function div(a,b){
+            return a/b;
+        }
+        let divide=div(5,10);
+        document.write("<br>Quotient of a number is:",divide);
+
+        //object
+        let person={
+            name:'Bob',
+            age:20,
+            city:'Trivandrum'
+
+        }
+        document.write("<br>")
+        document.write("<br>",person.name)
+        document.write("<br>",person.age)
+        document.write("<br>",person.city)
+
+         //this keyword
+         let persons={
+            name:'Bob',
+            age:20,
+            city:'Trivandrum',
+            greet:function(){
+                console.log('hello ' ,this.name);
+            }
+
+        }
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.city);
+        person.greet();
+
+        //arrow function
+        
+        let addarrow=(a,b)=>a+b;
+        console.log('arrow function',addarrow(2,3));
+
+        //settimeout
+        let Person1={
+            name:'Alice',
+            age:22,
+            
+            greet:function(){
+                setTimeout(()=>{
+                console.log('hello'+ this.name);
+                },10000);
+            }
+
+        };
+        Person1.greet();
+    </script>
+   
+</body>
+</html>
