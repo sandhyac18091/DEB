@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nameinput">Enter your Username:</label>
+    <input type="text" id="nameInput">
+    <button onclick="userInfo()">showName</button>
+    <p id="hey"></p>
+    <script>
+        function userInfo(){
+            let user=document.getElementById("nameInput").value
+            // document.getElementById("hey")
+            function displaymessage(){
+                document.getElementById("hey")
+            }
+            
+        
+        
+        if(user){
+            document.write("welcome "+user,"<br>");
+                document.write(`user ${user} has logged in`)
+        }
+        else{
+            alert("Enter your Username")
+        }
+
+    }
+        
+    </script>
+</body>
+</html>

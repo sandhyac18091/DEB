@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        function book (title,author,year){
+            this.title = title,
+            this.author =author,
+            this.year = year,
+
+            this.getDetails = ()=>{
+                console.log(`Title : ${this.title}, Author : ${this.author}, Year : ${this.year}`);
+            }
+        }
+
+        const b1 = new book("Ram c/o Anandhi","Akhil P Dharmajan",2020);
+        b1.getDetails();
+
+        const b2 = new book("Ettavam priyapetta ennod","Nimna vijay",2023);
+        b2.getDetails();
+
+
+    </script>
+</body>
+</html>

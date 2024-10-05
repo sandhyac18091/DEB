@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="numberform">
+    <label for="num1">Enter first number:</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Enter second number:</label>
+    <input type="number" id="num2"><br><br>
+    <button onclick="performCalculation()">sum</button>
+</form>
+<p id="add"></p>
+    <script>
+        
+        function performCalculation(){
+            document.getElementById("add")
+          let num1=parseInt(document.getElementById('num1').value);
+          let num2=parseInt(document.getElementById('num2').value);
+          
+        
+        let sum=num1+num2;
+        document.write("<br>",sum)
+        if(sum%2==0){
+            console.log("<br>the sum is even");
+        }else{
+            console.log("the sum is odd");
+        }
+    }      
+      
+    </script>
+</body>
+</html>

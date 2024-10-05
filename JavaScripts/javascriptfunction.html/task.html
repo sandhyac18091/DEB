@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="task">Enter a task</label>
+    <input type="text" id="task"><br>
+    <button onclick="addTask()">Add Task</button>
+    <ul id="tasklist"></ul>
+    <script>
+        function addTask(){
+            const taskinput=document.getElementById('task');
+            const tasklist=document.getElementById('tasklist');
+            if(taskinput.value.trim()!==''){
+                const li=document.createElement('li')
+                li.textContent=taskinput.value;
+                const removeButton=document.createElement('button')
+                removeButton.textContent='remove';
+                removeButton.onclick=function(){
+                    tasklist.removeChild(li);
+                };
+                li.appendChild(removeButton);
+                tasklist.appendChild(li);
+                taskinput.value='';
+            }
+        }
+    </script>
+</body>
+</html>

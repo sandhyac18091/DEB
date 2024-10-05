@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods to control this keyword</title>
+</head>
+<body>
+    <script>
+        //call method
+        // function greet(greeting){
+        //     console.log(greeting+ ',' +this.name);
+        // }
+        // let person={
+        //     name: 'Alice',
+        //     age:20
+        // }
+        // greet.call(person,'Hello');
+        const person={
+            fullname:function(city,country){
+                console.log(this.firstname+" "+this.lastname+","+city+","+country)
+            }
+        }
+        const person1={
+            firstname:'john',
+            lastname:'wick'
+        };
+        person.fullname.call(person1,'new york','USA');
+        //apply method
+        const person2={
+            firstname:'Alice',
+            lastname:'Smith'
+        };
+        person.fullname.apply(person2,['london','uk']);
+
+        //bind method
+        const person3={
+            firstname:'jason',
+            lastname:'George'
+        };
+        const boundFunction=person.fullname.bind(person3,'Kingston','jamaica');
+        person.fullname.call(person1,'New york','USA');
+        person.fullname.apply(person2,['London','UK'])
+        boundFunction();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<div>
+<body class="bg-purple-100">
+<div class="bg-slate-50 h-16 w-full shadow-xl">
+    <div class="float-left  w-12 ">
+        <img src="images/kbalogo.png" >
+    </div>
+    <div>
+        <nav>
+            <ul class="flex flex-row justify-end space-x-20 p-4 ">
+                <li><a href="homepage.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">HOME</a></li>
+                <li><a href="courses.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">COURSES</a></li>
+               
+                <li><a href="Addcourses.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">ADD COURSE</a></li>
+                <li><a href="login.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">LOGIN</a></li>
+                <li><a href="contactus.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">CONTACT US</a></li>
+                <li><a href="homepage.html" class=" hover:text-blue-600 font-mono font-bold text-slate-500">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="text-center mt-20"> 
+
+<h2 class="font-mono font-bold text-2xl">Feedback</h2>
+<p class="font-mono">Experaince on KBA</p>
+</div>
+
+</div>
+<div id="mydiv5">
+    <div id="good" class="text-center mt-20">
+        <label for="radio">GOOD</label>
+    </div>
+    <div id="bad" class="text-center mt-20">
+        <label for="radio">BAD</label>
+    </div>
+    <div id="avg" class="text-center mt-20">
+        <label for="radio">AVERAGE</label>
+    </div>
+</div>
+<script>
+{
+    let element = document.createElement("input");
+    element.type = "radio";
+    element.name = "good";
+    document.getElementById("good").appendChild(element);
+
+    let element1 = document.createElement("input");
+    element1.type = "radio";
+    element1.name = "good";
+    document.getElementById("bad").appendChild(element1);
+
+    let element2 = document.createElement("input");
+    element2.type = "radio";
+    element2.name = "good";
+    document.getElementById("avg").appendChild(element2);
+
+}
+
+</script>
+</html>

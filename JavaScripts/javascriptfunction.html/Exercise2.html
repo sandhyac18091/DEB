@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const car = {
+            make: 'Honda',
+            Model: 'Escape',
+            year: 2015,
+            getCarAge: function () {
+                const currentYear = 2024;
+                const age = currentYear - this.year;
+                console.log(`This car is ${age} years old`);
+            }
+        };
+
+        // Call the method to display the car's age
+        car.getCarAge();
+    </script>
+</body>
+
+</html>
