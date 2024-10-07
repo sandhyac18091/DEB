@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Application</title>
+    <style>
+        .expense-li{
+            margin: 10px;
+        }
+        .category-food{
+            color: green;
+        }
+        .category-Transport{
+            color: blue;
+        }
+        .category-Entertainment{
+            color: purple;
+        }
+        .completed{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Expense Tracker Application</h1>
+    <input type="text" id="description" placeholder="Enter expense description">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <input type="number" id="category" placeholder="Category (1-Food, 2-Transport, 3-Entertainment)">
+        <button onclick="addExpense()">Add Expense</button>
+    <ul id="tracklist" class="expenselist"></ul>
+    <script src="track.js"></script>
+</body>
+</html>
