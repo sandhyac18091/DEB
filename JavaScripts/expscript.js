@@ -1,21 +1,21 @@
-let expense = [];
+let expenses = [];
 let categories = [];
 
 function addExpense() {
 
-    let descInput = document.getElementById('decription');
+    let descInput = document.getElementById('decrptn');
     let expAmntInp = document.getElementById('amount');
-    let catgryInp = document.getElementById('category');
+    let catgryInp = document.getElementById('catgry');
     let expnslist = document.getElementById('expenselist');
 
-    let description = descInput.value.trim();
+    let descrptn = descInput.value.trim();
     let amount = Number(expAmntInp.value.trim());
     let category = Number(catgryInp.value.trim()) ;
 
-    if (description != '' && amount != NaN && category >= 1 && category <= 3) {
+    if (descrptn != '' && amount != NaN && category >= 1 && category <= 3) {
 
-        let expense = description + '-' + amount;
-        expense.push(expense);
+        let expense = descrptn + '-' + amount;
+        expenses.push(expense);
         categories.push(category);
 
         let li = document.createElement('li');
@@ -46,11 +46,11 @@ function addExpense() {
         editButton.textContent = 'Edit';
         editButton.onclick = function(){
 
-            let newdscrptn = prompt('Edit the description',description)
-            let expnsIndex = expense.indexOf(description);
-            expense[expnsIndex] = newdscrptn;
+            let newdscrptn = prompt('Edit the description',descrptn)
+            let expnsIndex = expenses.indexOf(descrptn);
+            expenses[expnsIndex] = newdscrptn;
             li.firstChild.textContent = newdscrptn;
-            description = newdscrptn;
+            descrptn = newdscrptn;
         }
         li.appendChild(editButton)
 
@@ -59,8 +59,8 @@ function addExpense() {
         removeButton.onclick = function(){
 
             expnslist.removeChild(li);
-            let expnsIndex = expense.indexOf(expense);
-            expense.splice(expnsIndex,1);
+            let expnsIndex = expenses.indexOf(expense);
+            expenses.splice(expnsIndex,1);
             priorities.splice(expnsIndex,1);
 
         }
