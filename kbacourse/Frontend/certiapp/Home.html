@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="/css/stylecss/style.css"> -->
+     <script>
+        window.onload=async()=>{
+            console.log("helo")
+            const response=await fetch("http://127.0.0.1:8002/viewUser",{
+                method:"GET",
+                credentials:'include',
+            })
+            const data=await response.json()
+
+            if(data.user=="Admin"){
+                document.getElementById("Admin").style.display='block'
+            }
+        }
+
+      async function search(event){
+        event.preventDefualt()
+        let datas =document.getElementById("data").value
+     console.log(datas);
+     const response=await fetch(`http://127.0.0.1:8002/getCertificate/${datas}`,{
+        method:'POST',
+        credentials:"include"
+
+     })
+     console.log(response);
+     const data= await response.json();
+    console.log(data);
+    console.log(data.message);
+    const searchData=data.message;
+    if(response.status == 200){
+        localStorage.setItem("searchCourse",searchData);
+          window.location.href="./View Certificate.html"
+    }    else if(response.status==404){
+        alert("no certificate found")
+        
+    }
+       }
+     </script>
+</head>
+<body>
+
+    <div class="text-right">
+        <a href="/Frontend/certiapp/Home.html" class="bg-cyan-400 text-white px-4 py-2 rounded">Home</a>
+        <a href="/Frontend/certiapp/CertificateDapp.html" class="ml-4 text-cyan-500 hover:underline"id="Admin" style=" display: none;">Issue Certificate</a>
+    </div>
+    
+    
+    <div class="">
+    <h1 class="font-extrabold text-3xl text-center">Certificate Dapp</h1>
+ <div>
+    <img src="online-course.png" class="w-56 m-auto mt-10"><br>
+</div>
+<div class="flex justify-center mt-8">
+    <input type="text" placeholder="Enter Certificate ID to View" required class="border-2 border-sky-500 h-8 " id="data">
+    <button type="submit" class="pr-2 border-2 bg-cyan-500 text-white w-16 h-8 "onclick="search(event)">Search</button>
+    
+</div>
+
+
+
+</body>
+</html>

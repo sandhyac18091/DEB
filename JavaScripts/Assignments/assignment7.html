@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment7</title>
+</head>
+<body>
+    <label for="element">Enter element</label>
+    <input type="text" id="element">
+    <button onclick="addElement()">Add Element</button>
+    
+    <p id="array">Array: []</p>
+    <p id="sorted">Sorted Array: []</p>
+    <p id="reverse">Reversed Array: []</p>
+
+    <label for="select">Select an index</label>
+    <select id="select" onchange="displayElement()">
+        <option value="">Choose an index</option>
+    </select>
+    <p id="index_display">The element is: </p>
+
+    <label for="search">Search element</label>
+    <input type="text" id="search">
+    <button onclick="searchElemnt()">Search</button>
+    <p id="search_result"></p>
+
+    <script>
+        const elementArray = [];
+        const displayArray = document.getElementById('array');
+        const sortedArray = document.getElementById('sorted');
+        const reversedArray = document.getElementById('reverse');
+
+        function addElement(){
+           const elements = document.getElementById('element').value;
+           elementArray.push(elements);
+           document.getElementById('element').value = '';
+           displayArray.innerHTML = `Array: [${elementArray}]`;
+
+           const selected = document.getElementById('select');
+           const option = document.createElement('option');
+           option.value = elementArray.length - 1;
+           option.text = `Index ${elementArray.length - 1}`;
+           selected.appendChild(option);
+
+           const sorted = [...elementArray].sort();
+           sortedArray.innerHTML = `Sorted Array: [${sorted}]`;
+
+           const reversed = [...elementArray].reverse();
+           reversedArray.innerHTML = `Reversed Array: [${reversed}]`;
+        }
+
+        function displayElement(){
+            const selected = document.getElementById('select').value;
+            const indexDisplay = document.getElementById('index_display');
+
+            if (selected) {
+                indexDisplay.innerText = `The element is: ${elementArray[selected]}`;
+            } else {
+                indexDisplay.innerText = '';
+            }  
+        }
+
+        function searchElemnt(){
+            const search = document.getElementById('search').value;
+            const searchResult = document.getElementById('search_result');
+            document.getElementById('search').value = '';
+            
+            if(elementArray.length == 0){
+                searchResult.innerHTML = 'The array is empty';
+                return;
+            }
+
+            const index = elementArray.indexOf(search);
+            if(index !== -1){
+                searchResult.innerHTML = `Element ${search} found at index ${index}`;
+            } else {
+                searchResult.innerHTML = `Element ${search} not found!`;
+            }
+        }
+    </script>
+</body>
+</html>

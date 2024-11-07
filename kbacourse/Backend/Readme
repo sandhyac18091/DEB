@@ -1,0 +1,5 @@
+step1:create node project npm init to initialize node project then display about project name version etc...
+step2:then is this ok say yes new file added package.json and node_modules then to ignore node modules to create gitignore file 
+step3: then create new file index.js
+step4:install express npm install express added 65 packages
+step5:import express

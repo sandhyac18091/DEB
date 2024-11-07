@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+<body>
+    <label for="input1">Name:</label>
+    <input type="text" id="input1"><br>
+    <label for="input2">Enter address: </label>
+    <input type="text" id="input2"><br><br>
+    
+    <input type="radio" id="btech" name="course" value="Btech">
+    <label for="btech">Btech</label>
+    
+    <input type="radio" id="mtech" name="course" value="Mtech">
+    <label for="mtech">Mtech</label>
+    
+    <input type="radio" id="mca" name="course" value="MCA">
+    <label for="mca">MCA</label>
+    
+    <input type="radio" id="others" name="course" value="Others">
+    <label for="others">Others</label><br><br>
+    
+    
+    <select id="otherCourses" style="display: none;">
+        <option value="BCA">BCA</option>
+        <option value="PGDCA">PGDCA</option>
+        <option value="BCom">BCom</option>
+        <option value="MPhil">MPhil</option>
+    </select>
+    
+    <script>
+        
+        const otherRadio = document.getElementById('others');
+        const dropdown = document.getElementById('otherCourses');
+        
+        document.querySelectorAll('input[name="course"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                dropdown.style.display = otherRadio.checked ? 'inline' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>

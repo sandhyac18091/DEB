@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment9</title>
+</head>
+<body>
+    <table border="1" >
+        <tr>
+            <td>Student Name</td>
+            <td>Marks</td>
+            
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>80</td>
+            
+        </tr>
+        <tr>
+            <td>Vinod</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>Divya</td>
+            <td>88</td>
+        </tr>
+        <tr>
+            <td>Ishitha</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>68</td>
+        </tr>
+    </table><br>
+        <label for="name">Enter name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="mark">Enter mark:</label>
+        <input type="number" id="mark"><br><br>
+        <button type="button" onclick="submit()">Submit</button><br><br>
+        <p id="result"></p>
+        <script>
+            const students=[
+                {name:"David",mark:80},
+                {name:"Vinod",mark:77},
+                {name:"Divya",mark:88},
+                {name:"Ishitha",mark:95},
+                {name:"Thomas",mark:68}
+            ];
+            function getGrade(mark) {
+            if (mark >= 90) {
+                return "Grade A+";
+            } else if (mark >= 80) {
+                return "Grade A";
+            } else if (mark >= 70) {
+                return "Grade B+";
+            } else if (mark >= 60) {
+                return "Grade C+";
+            } else if (mark >= 50) {
+                return "Grade C";
+            } else {
+                return "Fail";
+            }
+        }
+            function submit(){
+                const name=document.getElementById("name").value;
+                const mark=document.getElementById("mark").value;
+                const result=document.getElementById("result");
+
+                const student = students.find(student => student.name.toLowerCase() === name.toLowerCase());
+
+if (student) {
+    // Get the grade based on the student's mark
+    const grade = getGrade(student.mark);
+    result.textContent = `Student: ${student.name}, Mark: ${student.mark}, ${grade}`;
+} else {
+    result.textContent = "Student not found.";
+}
+}
+
+            
+ </script>
+       
+   
+</body>
+</html>

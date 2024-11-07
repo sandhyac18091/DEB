@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Array Saver</title>
+</head>
+<body>
+    <label for="element">Enter element:</label>
+    <input type="text" id="element"><br><br>
+    <button type="button" onclick="addElement()">add Element</button>
+   
+    <p id="result"></p>
+
+    <script>
+        // Array to store elements
+        const elementArray = [];
+
+        function addElement() {
+            const element = document.getElementById("element").value;
+            elementArray.push(element)
+            document.getElementById("result").innerHTML=`Array:[${elementArray}]`
+            document.getElementById("element").value=''
+        }
+
+        
+    </script>
+</body>
+</html>

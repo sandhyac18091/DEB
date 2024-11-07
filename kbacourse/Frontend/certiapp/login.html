@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <script>
+       async function userlogin(event){
+            event.preventDefault();
+            const userName=document.getElementById('userName').value
+            const Password=document.getElementById('Password').value
+            const response= await fetch("http://127.0.0.1:8002/login",{
+                method:'POST',
+                credentials:"include",
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify({
+                    UserName:userName,
+                    Password:Password,
+                })
+            });
+            console.log(response.status);
+            if(response.status==200){
+                alert("Success")
+                window.location.href="/Frontend/certiapp/Home.html"
+            }else{
+                if(response.status==103){
+                alert("Please check your credentials")
+                }else{
+                    if(res.status==103){
+                alert('Please Register')
+                }
+                }
+            }
+            const data= await response.json();
+            console.log(data)
+        }
+    </script>
+    </script>
+    <div class="w-full max-w-md bg-blue-200 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Login</h2>
+        <form>
+           
+            <div class="mb-4">
+                <label>UserName</label>
+                <input type="text" id="userName" class="w-full h-9 rounded-md">
+            </div>
+    
+            <div class="mb-4">
+                <label>Password</label>
+                <input type="password" id="Password" class="w-full h-9 rounded-md">
+            </div><br>
+           
+           
+             <div class="flex items-center justify-center ">
+                <button type="submit"
+                        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="userlogin(event)">
+                    Login
+                </button>
+            </div>
+            <div class="mt-10">
+                <a href="#" >Forgot Password?</a>
+            </div>
+            
+            <p class="mt-4 text-center text-gray-600 text-sm">
+                Already have an account?
+                <a href="#" class="text-blue-500 hover:underline">Sign up</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
