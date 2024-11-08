@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        async function userlogin(event) {
+            event.preventDefault(); // Corrected typo
+            
+            const userName = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            try {
+                const response = await fetch("http://127.0.0.1:8006/login", {
+                    method: "POST",
+                    credentials: "include",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        UserName: userName,
+                        Password: password
+                    })
+                });
+    
+                console.log(response.status);
+                if (response.status == 200) {
+                    alert("User login Successfully!");
+                    window.location.href = "/Frontend/Library management/Home.html";
+                } else {
+                    if (response.status == 103) {
+                        alert("Please register");
+                        window.location.href = "Home.html";
+                    }
+                    const data = await response.json();
+                    console.log(data);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Failed to connect to the server. Please check your network or server status.");
+            }
+        }
+    </script>
+    
+   
     
 </head>
 <body>
@@ -22,14 +62,10 @@
     </div>
     <div class="flex justify-center items-center min-h-screen bg-cover bg-center" style="background-image: url('library.jpg')">
 <div class="flex justify-center mt-32 pb-96">
-    <div class="w-96 p-8 h-full bg-white mr-96 rounded-md ">
+    <div class="w-96 p-8 h-full bg-white mr-96 rounded-md">
         <div class="font-serif">
-            <h2 class="text-center text-xl font-bold">Sign Up</h2>
-
-             <div class="mr-auto">
-                    <label for="username">FullName</label><br>
-                    <input type="text" id="username" name="username" required class="w-80 h-8 rounded-lg border border-black">
-                </div><br>
+            <h2 class="text-center text-xl font-bold">Login</h2>
+            
                 <div class="mr-auto">
                     <label for="username">Username</label><br>
                     <input type="text" id="username" name="username" required class="w-80 h-8 rounded-lg border border-black">
@@ -39,15 +75,7 @@
                     <input type="password" id="password" name="password" required class="w-80 h-8 rounded-lg border border-black">
                 </div><br>
                 <div class="">
-                    <label for="userrole">UserRole</label><br>
-                    <select id="userrole" name="userrole" required class="w-80 h-8 rounded-lg border border-black">
-                        <option value="">Select Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
-                    </select>
-                </div><br>
-                <div class="">
-                    <button type="submit" class="w-80 h-8 rounded-lg bg-cyan-600">Sign Up</button>
+                    <button type="submit" class="w-80 h-8 rounded-lg bg-cyan-600" onclick="userlogin(event)">Login</button>
                 </div>
             </form>
             <div class="mt-6">

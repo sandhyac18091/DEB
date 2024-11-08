@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card';
 
 const App = () => {
   const name='john';
@@ -20,6 +21,9 @@ const App = () => {
       }
     </ul>
     {loggedIn ? <h1>Hello world</h1>:<h1>hello Guyzzz</h1>}
+    <Card customClasses="bg-yellow-100"/><br></br>
+    <Card customClasses="bg-red-500"/><br></br>
+    <Card customClasses="bg-blue-200"/><br></br>
     </>
   )
 }

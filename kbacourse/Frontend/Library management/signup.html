@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+       async function usersignup(event){
+            // event.preventDefualt();
+            const fullName=document.getElementById('fullname').value
+            const eMail=document.getElementById('email').value
+            const userName=document.getElementById('username').value
+            const passWord=document.getElementById('password').value
+            const Userrole=document.getElementById('userrole').value
+
+            const response=await fetch("http://127.0.0.1:8006/Signup",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify({
+                    FullName:fullName,
+                    Email:eMail,
+                    UserName:userName,
+                    Password:passWord,
+                    UserRole:Userrole
+                })
+
+
+            });
+            console.log(response.status)
+            if(response.status==200){
+                alert("Successfully registered")
+                window.location.href='/Frontend/Library management/Login.html'
+            }else{
+                if(response.status==403){
+                    window.location.href='Login.html'
+                    alert("Already registered")
+                }else{
+                    if(response.status==500){
+                        alert("error")
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body>
+   
+     
+
+     <div class="text-right bg-gradient-to-r mt-6 space-x-10">
+        
+
+        <a href="Home.html" class="pr-6 text-black font-extrabold text-lg font-serif">Home</a>
+        <a href="signup.html" class="pr-6 text-black font-extrabold text-lg font-serif">Sign Up</a>
+        <a href="Login.html" class="pr-6 text-black font-extrabold text-lg font-serif">Login</a>
+        <a href="Addbook.html" class="pr-6 text-black font-extrabold text-lg font-serif">Addbook</a>
+        <a href="Viewbook.html" class="pr-6 text-black font-extrabold text-lg font-serif">Viewbook</a>
+    </div>
+    <div class="flex justify-center items-center min-h-screen bg-cover bg-center" style="background-image: url('library.jpg')">
+<div class="flex justify-center mt-32 pb-96">
+    <div class="w-96 p-8 h-full bg-white mr-96 rounded-md ">
+        <div class="font-serif">
+            <h2 class="text-center text-xl font-bold">Sign Up</h2>
+
+             <div class="mr-auto">
+                    <label for="fullname">FullName</label><br>
+                    <input type="text" id="fullname" required class="w-80 h-8 rounded-lg border border-black">
+                </div><br>
+                <div class="mr-auto">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" required class="w-80 h-8 rounded-lg border border-black">
+                </div><br>
+                <div class="mr-auto">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" required class="w-80 h-8 rounded-lg border border-black">
+                </div><br>
+                <div class="input">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" required class="w-80 h-8 rounded-lg border border-black">
+                </div><br>
+                <div class="">
+                    <label for="userrole">UserRole</label><br>
+                    <select id="userrole" required class="w-80 h-8 rounded-lg border border-black">
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div><br>
+                <div class="">
+                    <button type="submit" class="w-80 h-8 rounded-lg bg-cyan-600" onclick="usersignup(event)">Sign Up</button>
+                </div>
+            </form>
+            <div class="mt-6">
+                <a href="#">Forgot Password?</a>
+            </div><br>
+        </div>
+        <label class="font-serif"><b>Already have an account? </b><span class="font-serif"><a href="login.html">Sign Up</a></span></label>
+    </div>
+</div>
+</div>
+</body>
+</html>
